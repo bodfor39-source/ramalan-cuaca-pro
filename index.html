@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Cuaca Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Masukkan nama kota..." spellcheck="false">
+            <button onclick="checkWeather()">Cari</button>
+        </div>
+        <div class="error" id="errorMessage">
+            <p>Kota tidak ditemukan. Coba lagi!</p>
+        </div>
+        <div class="weather" id="weatherData">
+            <img src="https://openweathermap.org/img/wn/10d@4x.png" class="weather-icon" id="weatherIcon">
+            <h1 class="temp" id="temp">--°C</h1>
+            <h2 class="city" id="city">Kota</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/512/727/727790.png" alt="humidity">
+                    <div>
+                        <p class="humidity" id="humidity">--%</p>
+                        <p>Kelembapan</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/512/54/54298.png" alt="wind">
+                    <div>
+                        <p class="wind" id="wind">-- km/j</p>
+                        <p>Kecepatan Angin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
