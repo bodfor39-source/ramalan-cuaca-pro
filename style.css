@@ -11,6 +11,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.5s ease;
 }
 
 .card {
@@ -38,11 +39,11 @@ body {
     outline: 0;
     background: #ebfffc;
     color: #555;
-    padding: 10px 25px;
+    padding: 10px 20px;
     height: 50px;
     border-radius: 30px;
     flex: 1;
-    margin-right: 16px;
+    margin-right: 10px;
     font-size: 16px;
 }
 
@@ -55,7 +56,7 @@ body {
     height: 50px;
     cursor: pointer;
     color: #555;
-    font-weight: bold;
+    font-size: 18px;
     transition: 0.3s;
 }
 
@@ -77,6 +78,13 @@ body {
     font-size: 40px;
     font-weight: 400;
     margin-top: -10px;
+}
+
+.weather-desc {
+    font-size: 18px;
+    margin-top: -5px;
+    text-transform: capitalize;
+    opacity: 0.9;
 }
 
 .details {
@@ -104,8 +112,9 @@ body {
     margin-top: -6px;
 }
 
+/* Biarkan block agar saat loading pertama teks langsung muncul */
 .weather {
-    display: none; /* Disembunyikan sebelum kota dicari */
+    display: block; 
 }
 
 .error {

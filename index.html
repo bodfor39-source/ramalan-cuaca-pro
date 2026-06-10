@@ -12,6 +12,8 @@
         <div class="search">
             <input type="text" id="cityInput" placeholder="Masukkan nama kota..." spellcheck="false">
             <button onclick="checkWeather()">Cari</button>
+            <button onclick="getLocation()" title="Gunakan Lokasi Saya" style="margin-left: 8px;">📍</button>
+        </div>
         </div>
         <div class="error" id="errorMessage">
             <p>Kota tidak ditemukan. Coba lagi!</p>
@@ -20,7 +22,9 @@
             <img src="https://openweathermap.org/img/wn/10d@4x.png" class="weather-icon" id="weatherIcon">
             <h1 class="temp" id="temp">--°C</h1>
             <h2 class="city" id="city">Kota</h2>
-            <div class="details">
+            <p class="weather-desc" id="desc">--</p> 
+            
+            <div class="details"></div>
                 <div class="col">
                     <img src="https://cdn-icons-png.flaticon.com/512/727/727790.png" alt="humidity">
                     <div>
@@ -36,6 +40,7 @@
                     </div>
                 </div>
             </div>
+            <button class="location-btn" onclick="getLocation()">📍 Pakai Lokasi Saya</button>
         </div>
     </div>
     <script src="script.js"></script>
